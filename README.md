@@ -38,6 +38,30 @@ of.addons: [
 
 Add ofxV4l2loopback in addons.make file
 
+## Usage
+Firs, you need to init the camera:
+```cpp
+ofxV4l2loopback virtualcam;
+virtualcam.setup(width,height,device,fps);
+
+```
+| parameter  | usage                                   |
+|:----------:|:---------------------------------------:|
+| width      | virtual device width                    |
+| height     | virtual device height                   |
+| device     | device number (Exemple: /dev/video**1**)|
+| fps        | fps of device                           |
+
+Then, you just need to update cam render at each frames:
+
+```cpp
+virtualcam.update(pixels)
+```
+| parameter  | usage                                   |
+|:----------:|:---------------------------------------:|
+| pixels     | ofPixel that contain your frame         |
+
+
 ## Examples
 
 [https://github.com/Robotechnic/live_ascii_video](https://github.com/Robotechnic/live_ascii_video)
