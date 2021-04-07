@@ -1,3 +1,0 @@
-[submodule "src/libv4l2cpp"]
-	path = src/libv4l2cpp
-	url = https://github.com/mpromonet/libv4l2cpp.git
